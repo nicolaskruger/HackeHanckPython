@@ -8,7 +8,7 @@ sw = {
 }
 n = int(input())
 for i in range(n):
-    data = map(str,input().split())
+    data = list(map(str,input().split()))
     try:
         sw[data[0]](int(data[1]))
     except:
