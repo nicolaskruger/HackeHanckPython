@@ -2,8 +2,8 @@ from itertools import product
 def calc(li,m=0):
     sum = 0
     for l in li:
-        sum+=l*l
-    return sum%m
+        sum=(l*l+sum)%m
+    return sum
 def makeMap(prod,m):
     mp ={}
     for p in prod:
@@ -16,7 +16,9 @@ def makeMap(prod,m):
 #print(n,m)
 li =[]
 for i in range(n):
-    l = set(map(int,input().split()))
+    l = list(map(int,input().split()))
+    l =l[1:]
+    print(l)
     li.append(l)
 #print(li)
 prod = set(product(*li))
