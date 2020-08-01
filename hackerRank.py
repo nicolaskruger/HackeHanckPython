@@ -1,10 +1,17 @@
-import numpy
-(n,m)= map(int,input().split())
-array = []
-for _ in range(n):
-    array.append(list(map(int,input().split())))
-array= numpy.array(array)
-numpy.set_printoptions(legacy='1.13')
-print(numpy.mean(array,1))
-print(numpy.var(array,0))
-print(numpy.std(array))
+def howMuth(n):
+    tx = ""
+    for i in range(n):
+        tx=tx+"#"
+    return tx+" "
+fil = open("./text")
+li = fil.read().split('\n')
+fil.close()
+n = 4
+tx = howMuth(n)
+for i in range(len(li)):
+    li[i] = tx +li[i]
+tx = "\n".join(li)
+fil = open("out","w")
+fil.write(tx)
+fil.close()
+print(tx)
