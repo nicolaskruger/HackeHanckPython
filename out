@@ -1,4 +1,24 @@
-#### sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev
-#### sudo apt-get install libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev
-#### sudo apt-get install libgtk-3-dev
-#### sudo apt-get install python3-opencv
+##### Podemos perceber que a imagem processada pelo cluster destacou as partes de interesse que são as perna, o torço, o corpo completo, sendo que no corpo completo podemos perceber que ele não conseguiu indicar toda a área referente ao corpo faltando a cabeça e os ombros, mas isso deve ao programa utilizado para captura de corpo e não a estrutura do cluster.
+##### 
+##### Conclusão: O gargalo(parte mais lenta) dessa aplicação é justamente a analise da imagem feita por cada nó escravo, em um ambiente com maquinas reais formando um Cluster, teríamos um ganho maior de desempenho. Mas como estamos trabalhando em um ambiente virtual, essa aplicação demora em torno de uns 5 segundos para ser executada , em um ambiente real acredito que essa aplicação demore menos de 1 segundo para ser feita pois testei, o tempo de execução de um a operação de analise de imagem e essa retornou em menos de um segundo. E com o paralelismo conseguido pelo cluster poderíamos fazer mais de uma execução simultânea.             
+##### 
+##### 
+##### N. Krüger (aluno Unisinos: )
+##### 
+##### E-mail: nicolas.nkruger@gmail.com
+##### 
+##### github: https://github.com/nicolaskruger
+##### 
+##### References
+##### 1. https://www.infowester.com/cluster.php acessado dia 23-28/05/2020
+##### 2.  https://mpi4py.readthedocs.io/ acessado dia 23-28/04/2020
+##### 3.   https://www.virtualbox.org/ acessado dia 23-28/05/2020
+##### 4.   https://www.kernel.org/ acessado dia 23-28/05/2020
+##### 5.   https://ubuntu.com/ acessado dia 23–28/05/2020
+##### 6.  https://mpi4py.readthedocs.io/en/stable/tutorial.htmlacessado dia 23–28/05/2020
+##### 7.  https://opencv.org/ acessado dia 23–28/05/2020
+##### 8. https://medium.com/data-science-br/reconhecimento-facial-em-python-com-a-biblioteca-opencv-be500c3ebcb3 acessado dia 23–28/05/2020
+##### 
+##### 
+##### Repositorio Git. https://github.com/nicolaskruger/mpiCluster
+##### acessado dia 10 – 18/05/2020
